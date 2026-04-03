@@ -1,0 +1,121 @@
+1) Print Hello World
+#!/bin/bash
+echo "Hello World"
+
+2) Accept name and age & print
+#!/bin/bash
+echo "Enter your name:"
+read name
+echo "Enter your age:"
+read age
+echo "Name: $name"
+echo "Age: $age"
+
+3) Largest of 2 numbers
+#!/bin/bash
+echo "Enter two numbers:"
+read a b
+if [ $a -gt $b ]
+then
+    echo "$a is greater"
+else
+    echo "$b is greater"
+fi
+
+4) Largest of 3 numbers
+#!/bin/bash
+echo "Enter three numbers:"
+read a b c
+if [ $a -gt $b ] && [ $a -gt $c ]
+then
+    echo "$a is largest"
+elif [ $b -gt $a ] && [ $b -gt $c ]
+then
+    echo "$b is largest"
+else
+    echo "$c is largest"
+fi
+
+5) Print country name
+#!/bin/bash
+country="India"
+echo "Country: $country"
+
+6) Print age category
+#!/bin/bash
+echo "Enter your age:"
+read age
+if [ $age -lt 18 ]
+then
+    echo "Minor"
+else
+    echo "Adult"
+fi
+
+7) Addition of 2 numbers
+#!/bin/bash
+echo "Enter two numbers:"
+read a b
+sum=$((a + b))
+echo "Sum: $sum"
+
+8) Subtraction, Multiplication, Division
+#!/bin/bash
+echo "Enter two numbers:"
+read a b
+sub=$((a - b))
+mul=$((a * b))
+echo "Subtraction: $sub"
+echo "Multiplication: $mul"
+if [ $b -ne 0 ]
+then
+    div=$((a / b))
+    echo "Division: $div"
+else
+    echo "Division not possible"
+fi
+
+9) Even or Odd
+#!/bin/bash
+echo "Enter a number:"
+read num
+if [ $((num % 2)) -eq 0 ]
+then
+    echo "Even"
+else
+    echo "Odd"
+fi
+
+10) Leap Year
+#!/bin/bash
+echo "Enter year:"
+read year
+if [ $((year % 400)) -eq 0 ]
+then
+    echo "Leap Year"
+elif [ $((year % 100)) -eq 0 ]
+then
+    echo "Not Leap Year"
+elif [ $((year % 4)) -eq 0 ]
+then
+    echo "Leap Year"
+else
+    echo "Not Leap Year"
+fi
+
+11) Grade Calculation
+#!/bin/bash
+echo "Enter marks:"
+read marks
+if [ $marks -ge 75 ]
+then
+    echo "Distinction"
+elif [ $marks -ge 65 ]
+then
+    echo "First Division"
+elif [ $marks -ge 55 ]
+then
+    echo "Second Division"
+else
+    echo "Third Division"
+fi
